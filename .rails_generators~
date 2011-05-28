@@ -1,0 +1,128 @@
+---
+controller:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --template-engine=
+- --test-framework=
+- --helper
+generator:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --namespace
+helper:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --test-framework=
+integration_test:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --integration-tool=
+migration:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+model:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+observer:
+- --test-framework=
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+performance_test:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --performance-tool=
+plugin:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --tasks=
+- --generator
+- --test-framework=
+resource:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --template-engine=
+- --helper
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+- --force-plural
+- --resource-controller=
+- --actions=
+scaffold:
+- --migration
+- --timestamps
+- --parent=
+- --test-framework=
+- --fixture
+- --fixture-replacement=
+- --template-engine=
+- --helper
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+- --force-plural
+- --scaffold-controller=
+- --stylesheets
+scaffold_controller:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --force-plural
+- --orm=
+- --template-engine=
+- --test-framework=
+- --helper
+session_migration:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --orm=
+stylesheets:
+- --force
+- --pretend
+- --quiet
+- --skip
+mailer:
+- --force
+- --pretend
+- --quiet
+- --skip
+- --template-engine=
+- --test-framework=
