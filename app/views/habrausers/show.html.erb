@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Slug:</b>
+  <%= @habrauser.slug %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @habrauser.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_habrauser_path(@habrauser) %> |
+<%= link_to 'Back', habrausers_path %>

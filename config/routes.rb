@@ -1,4 +1,6 @@
 Habrafavs::Application.routes.draw do
+  resources :habrausers
+
   resources :blogs
 
   # The priority is based upon order of creation:
