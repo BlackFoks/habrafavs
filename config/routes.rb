@@ -1,4 +1,6 @@
 Habrafavs::Application.routes.draw do
+  resources :users
+
   resources :habrausers
 
   resources :blogs
