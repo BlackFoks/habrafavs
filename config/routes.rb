@@ -1,4 +1,6 @@
 Habrafavs::Application.routes.draw do
+  resources :favs
+
   resources :posts
 
   resources :users
