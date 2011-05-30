@@ -1,8 +1,12 @@
+# encoding: UTF-8
+
 class FavsController < ApplicationController
   # GET /favs
   # GET /favs.xml
   def index
     @favs = Fav.all
+    husers = Habrauser.all
+    @huser = husers[2]
 
     respond_to do |format|
       format.html # index.html.erb
@@ -40,16 +44,14 @@ class FavsController < ApplicationController
   # POST /favs
   # POST /favs.xml
   def create
-    @fav = Fav.new(params[:fav])
+    huser = Habrauser.find(params[:huser_id])
+    
+    # there we create a task for fetching list of favs
+    # >> some code here
 
     respond_to do |format|
-      if @fav.save
-        format.html { redirect_to(@fav, :notice => 'Fav was successfully created.') }
-        format.xml  { render :xml => @fav, :status => :created, :location => @fav }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @fav.errors, :status => :unprocessable_entity }
-      end
+      format.html { redirect_to(favs_url,
+        :notice => "Ваши закладки, #{huser.name}, будут обработаны в самое ближайшее время.") }
     end
   end
 

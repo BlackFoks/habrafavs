@@ -1,3 +1,7 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Listing favs</h1>
 
 <table>
@@ -23,3 +27,5 @@
 <br />
 
 <%= link_to 'New Fav', new_fav_path %>
+
+<%= button_to 'Fetch', favs_path(:huser_id => @huser) %>
