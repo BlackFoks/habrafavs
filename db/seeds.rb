@@ -1,5 +1,7 @@
 # encoding: UTF-8
 
+require "digest/sha2"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -20,9 +22,12 @@ blog_ruby = Blog.create(:slug => 'ruby', :title => 'Ruby')
 blog_ror = Blog.create(:slug => 'ror', :title => 'Ruby on Rails')
 
 # create users
-user_gearhead = User.create
-user_wishope = User.create
-user_blackfoks = User.create
+user_gearhead = User.create(:name => "gearhead", :password => "123", 
+                            :password_confirmation => "123")
+user_wishope = User.create(:name => "wishope", :password => "123", 
+                           :password_confirmation => "123")
+user_blackfoks = User.create(:name => "blackfoks", :password => "rcfhlfc", 
+                            :password_confirmation => "rcfhlfc")
 
 # create habrausers
 huser_gearhead = Habrauser.create(:slug => 'gearhead', :name => 'GearHead', 

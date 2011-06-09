@@ -4,11 +4,50 @@
   <title>Habrafavs</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+  <%= csrf_meta_tag %>  
 </head>
 <body>
 
-<%= yield %>
+<header>
+  <div class="logo">Habrafavs</div>
+  <div class="userpanel">
+    <% if current_user %>
+      
+      <%# links to profile and logout %>
+      <%= link_to current_user.name, current_user %>
+      [ <%= link_to "Выход", logout_path %> ] |
+      
+      <%# links to each habrauser %>
+      <% current_user.habrausers.each do |habrauser| %>
+        <img src="http://habrahabr.ru/i/bg-user2.gif" alt="" />
+        <%= link_to habrauser.name, habrauser %>
+      <% end %>
+      
+      <% if current_user.habrausers.empty? %>
+        <span>У вас нет ни одного хабраюзера</span>
+      <% end %>
+      
+    <%# not logged in... %>
+    <% else %>
+      [ <%= link_to "Вход", login_path %> ]
+      [ Регистрация ]
+    <% end %>
+    
+    
+  </div>
+</header>
+
+<section>
+  <%= yield %>
+</section>
+
+<aside>
+  
+</aside>
+
+<footer>
+  © blackfoks
+</footer>
 
 </body>
 </html>

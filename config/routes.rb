@@ -1,4 +1,22 @@
 Habrafavs::Application.routes.draw do
+  get 'home' => 'home#index'
+  get 'admin' => 'admin#index'
+  
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    get 'logout' => :destroy
+    delete 'logout' => :destroy
+  end
+  
+  get "admin/index"
+
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   get "home/index"
 
   resources :favs

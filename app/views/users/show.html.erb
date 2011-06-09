@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<div>
+  <h2>Личный кабинет им.<%= @user.name %></h2>
+  
+  <div>
+    <span class="registered_at">
+      Дата регистрации: <%= @user.created_at.localtime.strftime('%d.%m.%Y %H:%M') %>
+    </span>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
