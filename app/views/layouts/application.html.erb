@@ -11,8 +11,13 @@
 <header>
   <div class="logo">Habrafavs</div>
   <div class="userpanel">
-    [ <%= link_to "Вход", login_path %> ]
-    [ Регистрация ]
+    <% if current_user %>
+      <%= link_to current_user.name, current_user %>
+      [ <%= link_to "Выход", logout_path %> ]
+    <% else %>
+      [ <%= link_to "Вход", login_path %> ]
+      [ Регистрация ]
+    <% end %>
   </div>
 </header>
 
